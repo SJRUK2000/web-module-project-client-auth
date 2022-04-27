@@ -16,7 +16,7 @@ function App() {
           <h2>Friends Database</h2>
           <Link className='link' to='login'>Login</Link>
           <Link className='link' to='friends'>Friends List</Link>
-          <Link className='link' to='friends'>Add Friends</Link>
+          <Link className='link' to='friends/add'>Add Friends</Link>
           <Link className='link' to='friends'>Logout</Link>
 
         </header>
