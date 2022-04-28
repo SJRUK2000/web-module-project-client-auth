@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
+import axiosWithAuth from "../utils/axiosWithAuth";
 
 const Login = () => {
 const {push} = useHistory();
@@ -16,7 +16,7 @@ const [cred, setCred] = useState({ username: '', password: '' });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:9000/api/login', cred)
+        axiosWithAuth().post('/login', cred)
         .then(resp => {
           console.log(resp);
           localStorage.setItem("token", resp.data.token);
