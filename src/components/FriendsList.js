@@ -7,7 +7,7 @@ const FriendsList = () => {
         const token = localStorage.getItem('token')
 
         axios.get("http://localhost:9000/api/friends", {
-            header: {
+            headers: {
                 authorization: token
             }
         })
@@ -24,7 +24,7 @@ const FriendsList = () => {
         <ul>
             {
                 friends.map(friend=>{
-                    return  <li>{friend.name} - {friend.age} - {friend.email}</li>
+                    return  <li>{friend.name} - {friend.age} - {friend.email}</li> 
                 })
             }
             
